@@ -31,7 +31,10 @@ onMessage(async (message, sender) => {
     }
     case MessageType.GET_STATUS: {
       return {
-        active: tabId !== undefined ? getActiveTabs().includes(tabId) : getActiveTabs().length > 0,
+        active:
+          tabId !== undefined
+            ? getActiveTabs().includes(tabId)
+            : getActiveTabs().length > 0,
       };
     }
     default:

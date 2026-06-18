@@ -18,7 +18,9 @@ export const DEFAULT_SETTINGS: GameSettings = {
   sfxVolume: 0.8,
 };
 
-export function mergeSettings(partial: Partial<GameSettings> | null | undefined): GameSettings {
+export function mergeSettings(
+  partial: Partial<GameSettings> | null | undefined,
+): GameSettings {
   return {
     ...DEFAULT_SETTINGS,
     ...partial,

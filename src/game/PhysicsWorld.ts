@@ -47,10 +47,16 @@ export class PhysicsWorld {
   }
 
   addElement(element: SpawnedElement): PhysicsBodyHandle {
-    const body = Matter.Bodies.rectangle(element.x, element.y, element.width, element.height, {
-      frictionAir: 0.05,
-      restitution: 0.1,
-    });
+    const body = Matter.Bodies.rectangle(
+      element.x,
+      element.y,
+      element.width,
+      element.height,
+      {
+        frictionAir: 0.05,
+        restitution: 0.1,
+      },
+    );
 
     Matter.Composite.add(this.engine.world, body);
     this.bodies.set(element.id, body);
@@ -87,7 +93,10 @@ export class PhysicsWorld {
       const dx = holeX - body.position.x;
       const dy = holeY - body.position.y;
       const distance = Math.hypot(dx, dy);
-      const bodySize = Math.max(body.bounds.max.x - body.bounds.min.x, body.bounds.max.y - body.bounds.min.y);
+      const bodySize = Math.max(
+        body.bounds.max.x - body.bounds.min.x,
+        body.bounds.max.y - body.bounds.min.y,
+      );
 
       if (distance <= holeRadius && bodySize < holeRadius) {
         ids.push(id);

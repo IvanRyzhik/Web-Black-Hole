@@ -11,7 +11,9 @@ export async function loadSettings(): Promise<GameSettings> {
   return mergeSettings(stored);
 }
 
-export async function saveSettings(settings: Partial<GameSettings>): Promise<GameSettings> {
+export async function saveSettings(
+  settings: Partial<GameSettings>,
+): Promise<GameSettings> {
   const current = await loadSettings();
   const next = mergeSettings({ ...current, ...settings });
   await chrome.storage.sync.set({ [SETTINGS_STORAGE_KEY]: next });

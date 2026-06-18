@@ -15,14 +15,14 @@ Play a black-hole arcade game on top of any webpage. Page content becomes physic
 
 ## Tech stack
 
-| Layer | Technology |
-| --- | --- |
-| Extension | Chrome Manifest V3, TypeScript |
-| Build | Vite, `@crxjs/vite-plugin` |
-| Rendering | Three.js |
-| Physics | Matter.js (2D attraction + 3D visuals) |
-| Tests | Vitest, jsdom, `@webext-core/fake-browser` |
-| Quality | ESLint, Prettier, Husky, GitHub Actions |
+| Layer     | Technology                                 |
+| --------- | ------------------------------------------ |
+| Extension | Chrome Manifest V3, TypeScript             |
+| Build     | Vite, `@crxjs/vite-plugin`                 |
+| Rendering | Three.js                                   |
+| Physics   | Matter.js (2D attraction + 3D visuals)     |
+| Tests     | Vitest, jsdom, `@webext-core/fake-browser` |
+| Quality   | ESLint, Prettier, Husky, GitHub Actions    |
 
 ## Getting started
 
@@ -35,15 +35,17 @@ Then open `chrome://extensions`, enable Developer mode, and load the unpacked `d
 
 ## Scripts
 
-| Command | Description |
-| --- | --- |
-| `npm run dev` | Start Vite dev build |
-| `npm run build` | Typecheck and build extension |
-| `npm test` | Run Vitest in watch mode |
-| `npm run test:ci` | Run tests with coverage |
-| `npm run lint` | ESLint |
-| `npm run typecheck` | TypeScript |
-| `npm run package` | Build and zip extension |
+| Command             | Description                   |
+| ------------------- | ----------------------------- |
+| `npm run dev`       | Start Vite dev build          |
+| `npm run build`     | Typecheck and build extension |
+| `npm test`          | Run Vitest in watch mode      |
+| `npm run test:ci`   | Run tests with coverage       |
+| `npm run verify`    | Same checks as CI             |
+| `npm run verify:ci` | `npm ci` + verify (pre-push)  |
+| `npm run lint`      | ESLint                        |
+| `npm run typecheck` | TypeScript                    |
+| `npm run package`   | Build and zip extension       |
 
 ## Usage
 

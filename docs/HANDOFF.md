@@ -12,6 +12,7 @@
 ## Що вже зроблено (Етап 0 — scaffold)
 
 ### Інфраструктура
+
 - [x] Vite + `@crxjs/vite-plugin` + TypeScript strict
 - [x] ESLint 9, Prettier, Husky, lint-staged
 - [x] GitHub Actions CI (lint, format, typecheck, test, build)
@@ -19,11 +20,13 @@
 - [x] Локальний git credential **тільки для цього репо** → акаунт `IvanRyzhik` (глобально активний залишається `CodeITIvan-Ryzhyk`)
 
 ### Extension (MV3)
+
 - [x] `popup` — Play/Stop, аудіо toggle/volume
 - [x] `background` — tab state, messaging
 - [x] `content` — ін'єкція гри, Escape для виходу
 
 ### Гра (skeleton, працює базово)
+
 - [x] `GameEngine` — цикл, spawn, consume, teardown
 - [x] `SceneManager` — Three.js ortho, кубики/піраміди/шари, opacity
 - [x] `PhysicsWorld` — Matter.js, притягання, поглинання
@@ -33,6 +36,7 @@
 - [x] `AudioManager` — API-заглушки (файлів ще немає)
 
 ### Decomposer (базовий MVP)
+
 - [x] `DecomposerRegistry` + класифікація DOM
 - [x] `EmptyRegionDetector` — skip білого (лише для `unknown`)
 - [x] `ButtonDecomposer` → шари
@@ -41,11 +45,13 @@
 - [ ] `html2canvas` fallback — **не реалізовано** (`CaptureService` — порожня заглушка)
 
 ### Тести
+
 - [x] 18 тестів, coverage ~77% на core modules
 - [x] Unit: LevelCurve, Hole, settings, classifyElement, EmptyRegionDetector, clamp, messaging
 - [x] Integration: DecomposerRegistry + HTML fixture
 
 ### Документація
+
 - [x] README, CONTRIBUTING, CHANGELOG, LICENSE
 - [x] `docs/architecture.md`, `docs/development.md`
 - [ ] Demo GIF для README — **немає**
@@ -68,6 +74,7 @@ npm run dev
 5. Escape або Exit — повне прибирання overlay
 
 ### Відомі обмеження MVP
+
 - Текстури з реального контенту сторінки **не** накладаються (лише кольори за типом)
 - Progress ring на дірі — **не** реалізований
 - Анімація падіння при поглинанні — **мінімальна** (remove mesh)
@@ -80,6 +87,7 @@ npm run dev
 ## Наступні кроки (пріоритет)
 
 ### Етап 1 — Core Game Loop polish (наступний чат)
+
 1. **Progress ring** на ободі діри (`SceneManager.renderHole` — параметр `_progress` вже є)
 2. **Синхронізація mesh ↔ physics** кожен кадр для всіх тіл (зараз частково)
 3. **Анімація поглинання** — scale↓ + translate↓ перед remove
@@ -87,18 +95,21 @@ npm run dev
 5. Перевірити `canConsume` vs `getConsumableIds` (різна логіка розміру)
 
 ### Етап 2 — Decomposer + текстури
+
 1. Текстури з DOM: букви, кнопки, фрагменти картинок на `CanvasTexture`
 2. `html2canvas` fallback у `CaptureService`
 3. Ліміт `MAX_ELEMENTS` (500) + зменшення деталізації на важких сторінках
 4. Нові decomposer-сценарії (за бажанням): списки, SVG, таблиці
 
 ### Етап 3 — Polish + portfolio
+
 1. Demo GIF → `docs/assets/demo.gif` + README hero
 2. Аудіофайли від автора → `public/audio/`
 3. `InstancedMesh` / object pooling для performance
 4. Playwright E2E (опційно)
 
 ### Етап 4 — Release
+
 1. Chrome Web Store listing
 2. Coverage badge у README
 3. GitHub Release zip (`npm run package`)
@@ -107,16 +118,16 @@ npm run dev
 
 ## Ключові файли
 
-| Файл | Призначення |
-|------|-------------|
-| `src/game/GameEngine.ts` | Головний цикл гри |
-| `src/game/SceneManager.ts` | Three.js рендер |
-| `src/game/PhysicsWorld.ts` | Matter.js |
-| `src/game/Hole.ts` | Рівні, радіус, consume |
-| `src/game/LevelCurve.ts` | Лінійні пороги 10% |
-| `src/game/Decomposer/DecomposerRegistry.ts` | Spawn pipeline |
-| `src/game/constants.ts` | MAX_ELEMENTS, радіуси рівнів |
-| `manifest.config.ts` | MV3 manifest |
+| Файл                                        | Призначення                  |
+| ------------------------------------------- | ---------------------------- |
+| `src/game/GameEngine.ts`                    | Головний цикл гри            |
+| `src/game/SceneManager.ts`                  | Three.js рендер              |
+| `src/game/PhysicsWorld.ts`                  | Matter.js                    |
+| `src/game/Hole.ts`                          | Рівні, радіус, consume       |
+| `src/game/LevelCurve.ts`                    | Лінійні пороги 10%           |
+| `src/game/Decomposer/DecomposerRegistry.ts` | Spawn pipeline               |
+| `src/game/constants.ts`                     | MAX_ELEMENTS, радіуси рівнів |
+| `manifest.config.ts`                        | MV3 manifest                 |
 
 ---
 

@@ -143,7 +143,12 @@ export class GameEngine {
     }
 
     const nextHoleState = this.hole.getState();
-    this.scene.renderHole(nextHoleState.x, nextHoleState.y, nextHoleState.radius, nextHoleState.progress);
+    this.scene.renderHole(
+      nextHoleState.x,
+      nextHoleState.y,
+      nextHoleState.radius,
+      nextHoleState.progress,
+    );
     this.hud?.update(nextHoleState, this.totalElements);
 
     this.loopId = requestAnimationFrame(this.tick);

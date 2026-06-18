@@ -165,11 +165,20 @@ export class SceneManager {
         );
         break;
       default:
-        geometry = new THREE.BoxGeometry(element.width, element.height, Math.min(element.width, element.height));
+        geometry = new THREE.BoxGeometry(
+          element.width,
+          element.height,
+          Math.min(element.width, element.height),
+        );
         break;
     }
 
-    const color = element.kind === 'text' ? 0x60a5fa : element.kind === 'button' ? 0xf59e0b : 0x34d399;
+    const color =
+      element.kind === 'text'
+        ? 0x60a5fa
+        : element.kind === 'button'
+          ? 0xf59e0b
+          : 0x34d399;
     const material = new THREE.MeshStandardMaterial({
       color,
       roughness: 0.55,

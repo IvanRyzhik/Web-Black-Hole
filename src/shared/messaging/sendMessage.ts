@@ -1,7 +1,4 @@
-import {
-  isExtensionMessage,
-  type ExtensionMessage,
-} from '@/shared/messaging/types';
+import { isExtensionMessage, type ExtensionMessage } from '@/shared/messaging/types';
 
 type MessageResponse = unknown;
 

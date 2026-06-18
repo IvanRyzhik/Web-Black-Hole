@@ -17,10 +17,8 @@ jobs:
           node-version: 22
           cache: npm
 
+      - run: corepack enable
+
       - run: npm ci
 
-      - run: npm run lint
-      - run: npm run format
-      - run: npm run typecheck
-      - run: npm run test:ci
-      - run: npm run build
+      - run: npm run verify

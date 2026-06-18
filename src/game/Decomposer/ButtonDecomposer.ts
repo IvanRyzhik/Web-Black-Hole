@@ -1,6 +1,9 @@
 import type { SpawnedElement } from '@/game/Decomposer/types';
 
-export function decomposeButton(element: HTMLElement, idPrefix: string): SpawnedElement[] {
+export function decomposeButton(
+  element: HTMLElement,
+  idPrefix: string,
+): SpawnedElement[] {
   const rect = element.getBoundingClientRect();
   const layerCount = 3;
 
