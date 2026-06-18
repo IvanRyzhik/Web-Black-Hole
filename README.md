@@ -2,6 +2,8 @@
 
 Play a black-hole arcade game on top of any webpage. Page content becomes physical shapes you can consume, and the hole grows through 10 size levels.
 
+**Repository:** https://github.com/IvanRyzhik/Web-Black-Hole
+
 ## Features
 
 - Overlay game on any site without leaving the page
@@ -67,6 +69,7 @@ docs/           architecture and development notes
 
 ## Documentation
 
+- [Handoff / next steps](docs/HANDOFF.md) — start here when continuing development
 - [Architecture](docs/architecture.md)
 - [Development guide](docs/development.md)
 
