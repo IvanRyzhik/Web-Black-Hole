@@ -1,0 +1,66 @@
+.bh-hud {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2147483647;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+}
+
+.bh-hud__top {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  pointer-events: auto;
+}
+
+.bh-hud__size,
+.bh-hud__counter {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(15, 15, 20, 0.75);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.bh-hud__opacity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(15, 15, 20, 0.75);
+  color: #fff;
+  font-size: 13px;
+}
+
+.bh-hud__opacity input {
+  width: 120px;
+}
+
+.bh-hud__exit {
+  min-width: 96px;
+  min-height: 48px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 999px;
+  background: #ef4444;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.bh-hud__exit:hover {
+  background: #dc2626;
+}

@@ -1,0 +1,70 @@
+:root {
+  color-scheme: dark;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #0f1115;
+  color: #f8fafc;
+}
+
+.popup {
+  padding: 16px;
+  display: grid;
+  gap: 14px;
+}
+
+.popup__header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.popup__header p {
+  margin: 4px 0 0;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.popup__status {
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #1e293b;
+  font-size: 13px;
+}
+
+.popup__primary {
+  min-height: 44px;
+  border: 0;
+  border-radius: 12px;
+  background: #6366f1;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.popup__primary.is-stop {
+  background: #ef4444;
+}
+
+.popup__group {
+  display: grid;
+  gap: 10px;
+}
+
+.popup__row {
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.popup__row input[type='range'] {
+  width: 100%;
+}

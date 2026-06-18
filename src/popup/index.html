@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Black Hole</title>
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <header class="popup__header">
+        <h1>Black Hole</h1>
+        <p>Turn any webpage into a playground.</p>
+      </header>
+
+      <section class="popup__status" id="status">Game inactive</section>
+
+      <button id="toggle-game" class="popup__primary" type="button">Play</button>
+
+      <section class="popup__group">
+        <label class="popup__row">
+          <span>Music</span>
+          <input id="music-enabled" type="checkbox" checked />
+        </label>
+        <label class="popup__row">
+          <span>Music volume</span>
+          <input id="music-volume" type="range" min="0" max="100" value="60" />
+        </label>
+        <label class="popup__row">
+          <span>Sound effects</span>
+          <input id="sfx-enabled" type="checkbox" checked />
+        </label>
+        <label class="popup__row">
+          <span>SFX volume</span>
+          <input id="sfx-volume" type="range" min="0" max="100" value="80" />
+        </label>
+      </section>
+    </main>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
